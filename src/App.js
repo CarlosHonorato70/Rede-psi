@@ -6,6 +6,7 @@ import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { AuthProvider } from './context/AuthContext';
+import './styles/main.css';
 
 function App() {
     return (
