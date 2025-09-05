@@ -62,6 +62,42 @@ A social network platform focused on mental health support and community buildin
 - **Frontend**: React, React Router, CSS3
 - **Database**: MongoDB with Mongoose ODM
 
+## Infraestrutura Recomendada & Boas Práticas
+
+### Escalabilidade para milhões de usuários
+
+- **Banco de Dados**  
+  Use MongoDB em ambiente de produção, preferencialmente com MongoDB Atlas Cloud (ou similar), ativando sharding e replica set. Isso garante performance, alta disponibilidade e recuperação de desastres.
+- **Backend**  
+  Hospede o Node.js/Express em provedores cloud (AWS, Azure, GCP, DigitalOcean, Heroku, Railway). Use múltiplas instâncias do servidor (horizontal scaling) e balanceador de carga (ex: NGINX, AWS ELB).
+- **Armazenamento de Arquivos**  
+  Para uploads (avatares, imagens, anexos), utilize serviços como AWS S3, Google Cloud Storage, ou Azure Blob Storage.
+- **Cache**  
+  Implemente Redis (ou Memcached) para sessões, resultados de busca populares e feeds, melhorando resposta e reduzindo carga no banco.
+- **Monitoramento & Logs**  
+  Utilize ferramentas como Datadog, NewRelic, Sentry ou Elastic Stack para monitorar erros, performance e uso de recursos.
+- **Segurança**  
+  - Sempre use HTTPS.
+  - Armazene senhas com bcrypt e nunca em texto puro.
+  - Proteja variáveis de ambiente (.env) e nunca faça commit delas no repositório.
+  - Implemente limites de requisição (rate limiting) para evitar abuso.
+- **Backup e Recuperação**  
+  Programe backups automáticos para o banco de dados e teste periodicamente a restauração.
+- **Índices no MongoDB**  
+  Crie índices para campos de busca frequente (email, nome de usuário, grupos) para garantir consultas rápidas mesmo com milhões de documentos.
+- **Documentação de API e Deploy**  
+  Mantenha sempre atualizada a documentação das rotas, autenticação, exemplos de uso e processos de deploy.
+
+### Dicas para crescimento seguro
+
+- Programe o sistema pensando em crescimento gradual: inicie com poucos recursos e aumente conforme necessário.
+- Faça testes de carga regularmente simulando crescimento de usuários.
+- Implemente logs detalhados para análise de comportamento e resolução rápida de bugs.
+
+---
+
+Essas recomendações garantem que a Rede Psi seja robusta, segura e pronta para crescer!
+
 ## API Endpoints
 
 ### Authentication
