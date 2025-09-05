@@ -1,5 +1,31 @@
-# Frontend
+# Rede Psi
 
-Esta pasta contém o código-fonte do frontend da Rede Psi (ReactJS).
+Mental Health Social Network - Uma rede social focada em saúde mental.
 
-Coloque aqui os arquivos relacionados à interface do usuário.
+## Estrutura do Projeto
+
+### Backend
+- **Localização**: `backend/`
+- **Tecnologias**: Node.js, Express, MongoDB
+- **Porta**: 5000
+
+### Frontend
+- **Localização**: `frontend/`
+- **Tecnologias**: React, React Router
+- **Porta**: 3000 (desenvolvimento)
+
+## Como Executar
+
+### Backend
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
+npm start
+```
