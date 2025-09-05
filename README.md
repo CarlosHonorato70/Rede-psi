@@ -16,14 +16,38 @@ Mental Health Social Network - Uma rede social focada em saúde mental.
 
 ## Como Executar
 
-### Backend
+### Instalação das Dependências
+```bash
+npm run install:all
+```
+
+### Executar Backend
+```bash
+npm run start:backend
+# ou para desenvolvimento:
+npm run dev:backend
+```
+
+### Executar Frontend
+```bash
+npm run start:frontend
+```
+
+### Build do Frontend
+```bash
+npm run build:frontend
+```
+
+### Execução Individual
+
+#### Backend
 ```bash
 cd backend
 npm install
 npm start
 ```
 
-### Frontend
+#### Frontend
 ```bash
 cd frontend
 npm install
