@@ -14,6 +14,22 @@ app.use(express.json());
 mongoose.connect('mongodb://localhost/mental-health-social', {
     useNewUrlParser: true,
     useUnifiedTopology: true
+})
+.then(() => {
+    console.log('Connected to MongoDB successfully');
+})
+.catch((error) => {
+    console.error('MongoDB connection error:', error);
+    process.exit(1);
+});
+
+// Handle MongoDB connection events
+mongoose.connection.on('disconnected', () => {
+    console.log('MongoDB disconnected');
+});
+
+mongoose.connection.on('error', (error) => {
+    console.error('MongoDB error:', error);
 });
 
 // Routes
