@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-mongoose.connect('mongodb://localhost/mental-health-social', {
+mongoose.connect('mongodb://127.0.0.1/mental-health-social', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
